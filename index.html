@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Mahi!</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1>Happy Birthday, Mahi❤️! 🎉</h1>
+        <p>Click the button below to open your special diary.</p>
+
+        <!-- Book Cover Image with Adjustable Size -->
+        <div class="cover-wrapper">
+            <img src="images/bookcover.jpg" id="bookCoverImage" alt="Book Cover" class="book-cover-image">
+            <!-- <div class="slider-container">
+                <label for="coverSize">Adjust Book Cover Size:</label>
+                <input type="range" id="coverSize" name="coverSize" min="200" max="600" value="400" oninput="adjustCoverSize(this.value)">
+            </div> -->
+        </div>
+
+        <button class="nav-button" onclick="startDiary()">Start 💖</button>
+    </div>
+
+    <!-- Open Diary Button -->
+    <div class="open-button" id="openButton" onclick="openBook()">💖 Open Diary 💖</div>
+
+    <div class="book-container" id="bookContainer">
+        <div class="book-content">
+            <!-- First Diary Page -->
+            <div class="diary-page active"> <!-- Add the 'active' class to the first page -->
+                <h3>January 15, 2024</h3>
+                <p>Yaad hai jab phali baar mile the hum...</p>
+                <p>Tu meri C++ ki class mai thi par phir bhi nhi janata tha mai tujhe aache se...</p>
+                <p>kabhi socha tha hum itne acche dost banenge 😙</p>
+                <img src="images/photo1.jpg" alt="Photo 1"class="book-cover-image" >
+            </div>
+
+            <div class="diary-page">
+                <h3>22 feburary, 2024</h3>
+                <p>Welll humari acchi se baat karna toh advitya ke time pe hi shuru hua tha 👀 </p>
+                <p>Mostly insta pr vo bhi</p>
+                <p>Par mujhe tera number phali baar tab mila tha jab tune mujhe cycle maangne ke liye call kiya tha🚲</p>
+                <p>Vase vo airplane wala ganna tu abhi bhi sunti hai kya ?? 🤔✈️✈️</p>
+                <img src="images/photo2.jpg" alt="Photo 2" class="book-cover-image">
+            </div>
+
+            <div class="diary-page">
+                <h3>July 21, 2024</h3>
+                <p>chudail ke bday pr phali baar maine tere sath photo li hogi 😭😭</p>
+                <p>parr kya hi kaare humare liye whi bhut hai..</p>
+                <p>Bhut hi pyaar din gaya tha yaar vo...🌈</p>
+                <img src="images/photo3.jpg" alt="Photo 3" class="book-cover-image">
+            </div>
+
+            <div class="diary-page">
+                <h3>This Photo was still cinematic❤️❤️😙</h3>
+                <p>Professional photographer toh hu hi mai 😏</p>
+                <img src="images/photo4.jpg" alt="Photo 4" class="book-cover-image">
+            </div>
+            
+            <div class="diary-page">
+                <p>Parr sahi mai yaar tu kitni acchi hai❤️</p>
+                <p>aur ak mai bhut bada cheedu choti baato paar cheed jata hai...</p>
+                <p>fir bina soche samjhe kuch bhi kaam kar leta hai ... pagl hi types hu mai na sahi mai 😫</p>
+                <p>tujhe haar baar gussa kar deta hu faltu mai main😭</p>
+                <p>I am reallyyy Sorry for everthing agr kuch baach gaya hai abhi toh🥹🤍🫰</p>
+                <img src="images/photoex.png" alt="Photo ex" class="book-cover-image">
+            </div>
+            <div class="diary-page">
+                <h3>30th August, 2024</h3>
+                <p>Yarr is din kitna maza aaya tha🥹</p>
+                <p>Tere sath akele ghumne mai❤️</p>
+                <p>Tere sath akele khane mai❤️</p>
+                <p>Tere sath akele bhopal ghumne mai❤️</p>
+                <p>Tere sath akele market ghumne mai❤️</p>
+                <p>Tere sai reject hoke❤️</p>
+                <p>par sahi mai yarr is din kitna maza aaya tha(last wale ko chor ke)🥹</p>
+                <img src="images/holding.jpg" alt="Photo 4" class="book-cover-image">
+            </div>
+            <div class="diary-page">
+                <h3>19th October, 2024</h3>
+                <p>Garba Night, alg hi din tha yaarr 😏</p>
+                <p>bhut pyaarri lag rahi thi yaar us din tu..</p>
+                <p>Know haar din lagti hai but still ❤️❤️🫰</p>
+                <img src="images/photo5.jpg" alt="Photo 4" class="book-cover-image">
+            </div>
+            <div class="diary-page">
+                <h3>Thank you</h3>
+                <p>sahi mai thank you yaar...</p>
+                <p>thank you for being there...</p>
+                <p>thank you for beliving in me...</p>
+                <p>thank you for coming into my life...</p>
+                <p>thank you for everything Mahi, Thank you❤️</p>
+                <p>Bhut sarrra pyaar tujhe ❤️❤️🥹</p>
+                <p>And one again Happy Birthday baby🤍🫰</p>
+            </div>
+        </div>
+    
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-button prev-button" onclick="previousPage()"><i class="fas fa-arrow-left"></i> Previous</button>
+            <button class="nav-button next-button" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+    
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Custom Audio Player -->
+    <div class="audio-player">
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        <audio id="backgroundMusic" loop>
+            <source src="audio/birthdaymusic.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <!-- Custom Audio Player -->
+    <div class="audio-player">
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="audio\birthdaymusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

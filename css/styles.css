@@ -1,0 +1,104 @@
+/* General Body Styling */
+body {
+    background-color: #fce4ec;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Book Cover Image Styling */
+.cover-wrapper {
+    margin-top: 20px;
+}
+
+.book-cover-image {
+    width: 400px; /* Default size, will be controlled by JS */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease;
+}
+
+.slider-container {
+    margin-top: 15px;
+}
+
+.slider-container input[type="range"] {
+    width: 200px;
+}
+
+/* Open Diary Button */
+.open-button {
+    display: none;
+    width: 250px;
+    height: 60px;
+    background-color: #e91e63;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+}
+
+/* .open-button:hover {
+    transform: scale(1.1);
+} */
+
+/* Book Container */
+.book-container {
+    display: none;
+    width: 900px;
+    height: 700px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-button {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.diary-page {
+    display: none; /* Hide all pages by default */
+}
+
+.diary-page.active {
+    display: block; /* Show only the active page */
+}
